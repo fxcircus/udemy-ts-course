@@ -14,3 +14,9 @@ someNum += 1
 let someBool: boolean = true
 someBool = false
 // someBool = 1 // Type 'number' is not assignable to type 'boolean'.ts(2322)
+
+// EXAMPLE - Type Inference: 
+let inferedVar = 5
+// inferedVar = "five"
+
+let infVar2;
