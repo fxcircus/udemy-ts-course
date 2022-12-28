@@ -23,3 +23,16 @@ const hi = (name: string = "Roy") => {
 const sumNums = (x: number, y: number): number => {
 	return x + y
 }
+
+// Void return type
+// ----------------
+const printMessage = (msg: string): void => {
+    console.log(msg)
+}
+
+// Never
+// -----
+function makeError(msg: string): never {
+    throw new Error(msg)
+    // return msg // Type 'string' is not assignable to type 'never'.ts(2322)
+}
