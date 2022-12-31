@@ -17,4 +17,10 @@ var caculateTax = function (price, tax) {
     }
     return price * tax;
 };
-console.log(caculateTax("$100", 0.8));
+console.log(caculateTax("$100", 0.8)); // 80
+// array that can hold numbers AND string values (AT THE SAME TIME), using union types
+var stuffNumsOrStrs = [];
+// array that can ONLY hold numbers OR strings, (NOT AT THE SAME TIME)
+var stuffOnlyOne = [];
+var today = "Tuesday";
+var mood = "Happy";
