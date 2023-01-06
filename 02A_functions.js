@@ -1,23 +1,34 @@
+"use strict";
 // Function declaration
 // --------------------
 function greet(name) {
-    console.log("hi ".concat(name));
+    console.log(`hi ${name}`);
 }
 greet('Roy');
 // Function expression (arrow function syntax)
 // -------------------------------------------
-var sayHi = function (name, age) {
-    console.log("Hello ".concat(name, ", you are ").concat(age, " year old"));
+const sayHi = (name, age) => {
+    console.log(`Hello ${name}, you are ${age} year old`);
 };
 sayHi('Moses', 120);
 // Default params
 // --------------
-var hi = function (name) {
-    if (name === void 0) { name = "Roy"; }
-    console.log("Hi ".concat(name));
+const hi = (name = "Roy") => {
+    console.log(`Hi ${name}`);
 };
 // Return type annotation
 // ----------------------
-var sumNums = function (x, y) {
+const sumNums = (x, y) => {
     return x + y;
 };
+// Void return type
+// ----------------
+const printMessage = (msg) => {
+    console.log(msg);
+};
+// Never
+// -----
+function makeError(msg) {
+    throw new Error(msg);
+    // return msg // Type 'string' is not assignable to type 'never'.ts(2322)
+}

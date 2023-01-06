@@ -1,26 +1,27 @@
+"use strict";
 // Accepting an object as a parameter
 // ----------------------------------
-var printName = function (person) {
-    console.log("".concat(person.first, " ").concat(person.last));
+const printName = (person) => {
+    console.log(`${person.first} ${person.last}`);
 };
 printName({ first: "11", last: 'Hopper' });
 // Variable with object type assigning values
 // ------------------------------------------ 
-var coordinate = { x: 34, y: 2 };
+let coordinate = { x: 34, y: 2 };
 // Function with object as return type
 // ------------------------------------------------------
-var randomCoordinate = function () {
+const randomCoordinate = () => {
     return { x: Math.random(), y: Math.random() };
 };
-var age = 32;
-var coordinateAlias = { x: 34, y: 2 };
-var randomCoordinateAlias = function () {
+let age = 32;
+let coordinateAlias = { x: 34, y: 2 };
+const randomCoordinateAlias = () => {
     return { x: Math.random(), y: Math.random() };
 };
-var doublePoint = function (point) {
+const doublePoint = (point) => {
     return { x: point.x * 2, y: point.y * 2 };
 };
-var yesterday = {
+const yesterday = {
     title: 'Yesterday',
     artist: 'The Beatles',
     numStreams: 9999999999,
@@ -29,19 +30,19 @@ var yesterday = {
         writer: 'Sir Paul McCartney'
     }
 };
-var calculatePayout = function (song) {
+const calculatePayout = (song) => {
     return song.numStreams * 0.0033;
 };
 console.log(calculatePayout(yesterday));
-var user1 = {
+const user1 = {
     id: 123,
     username: 'Roy'
 };
-var happyFace = {
+const happyFace = {
     radius: 4,
     color: 'Yellow'
 };
-var spalding = {
+const spalding = {
     radius: 5,
     color: 'Orange',
     bounces: 100

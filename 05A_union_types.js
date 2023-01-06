@@ -1,16 +1,17 @@
+"use strict";
 // EX1: age variable that can be used as number OR string:
-var age = 32;
+let age = 32;
 age = "string value";
 age = "24";
-var coordinaes = { x: 1, y: 34 };
+let coordinaes = { x: 1, y: 34 };
 coordinaes = { lat: 123, long: 345 };
 // EX3: function parameters:
-var printAge = function (age) {
-    console.log("You are ".concat(age, " years old"));
+const printAge = (age) => {
+    console.log(`You are ${age} years old`);
 };
 printAge("32");
 printAge("thirty two");
-var caculateTax = function (price, tax) {
+const caculateTax = (price, tax) => {
     if (typeof price === "string") {
         // removing the $ sign and converting to a number
         price = parseFloat(price.replace("$", ""));
@@ -19,8 +20,8 @@ var caculateTax = function (price, tax) {
 };
 console.log(caculateTax("$100", 0.8)); // 80
 // array that can hold numbers AND string values (AT THE SAME TIME), using union types
-var stuffNumsOrStrs = [];
+const stuffNumsOrStrs = [];
 // array that can ONLY hold numbers OR strings, (NOT AT THE SAME TIME)
-var stuffOnlyOne = [];
-var today = "Tuesday";
-var mood = "Happy";
+let stuffOnlyOne = [];
+let today = "Tuesday";
+let mood = "Happy";

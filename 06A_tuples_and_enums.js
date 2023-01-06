@@ -1,12 +1,13 @@
+"use strict";
 // -------
 // !TUPLES!
 // --------
 // EX1: "an array with 2 values, 1st val MUST be number, 2nd MUST be string:
-var myTuple;
+let myTuple;
 myTuple = [1, 'a'];
 // EX2:  Tuple implementation of RGB, unlick union type, the tuple requires 3 and only 3 numbers.
-var rgbTuple = [255, 0, 30];
-var httpRes = [200, 'OK'];
+const rgbTuple = [255, 0, 30];
+const httpRes = [200, 'OK'];
 // LIMITATION: we can we can push more values after init:
 httpRes.push(123);
 console.log(httpRes); // [ 200, 'OK', 123 ]
@@ -21,8 +22,8 @@ var OrderStatus;
     OrderStatus[OrderStatus["DELIVERED"] = 2] = "DELIVERED";
     OrderStatus[OrderStatus["RETURNED"] = 3] = "RETURNED";
 })(OrderStatus || (OrderStatus = {}));
-var myStatus = OrderStatus.DELIVERED; // (enum member) OrderStatus.DELIVERED = 2
-var isDelivered = function (status) {
+const myStatus = OrderStatus.DELIVERED; // (enum member) OrderStatus.DELIVERED = 2
+const isDelivered = (status) => {
     return status === OrderStatus.DELIVERED;
 };
 isDelivered(OrderStatus.DELIVERED); // true

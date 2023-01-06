@@ -53,3 +53,24 @@ const cooper: ServiceDog = {
         return "WOOOOFF"
     }
 }
+
+// Multiple inheritance
+// --------------------
+
+interface Door {
+    doorColor: string
+}
+interface Bed {
+    bedSize: "single" | "queen" | "king"
+}
+interface Room extends Door, Bed {
+    isFurnished: boolean
+}
+
+const bedroom: Room = {
+    doorColor: "white",
+    bedSize: "queen",
+    isFurnished: true
+}
+
+console.log("Hi")

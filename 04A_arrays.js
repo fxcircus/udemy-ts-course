@@ -1,16 +1,17 @@
+"use strict";
 // EX1: array of strings:
-var strArr = [];
+const strArr = [];
 strArr.push("steven");
 // EX2: array of numbers:
-var numArr = [45, 30];
+const numArr = [45, 30];
 numArr.push(1);
-var typeArr = [];
+const typeArr = [];
 typeArr.push({ key1: 1, key2: "one" });
 // EX4: Alternate syntax (with array of booleans)
-var boolArr = [];
+let boolArr = [];
 // EX5: Multidimentional arrays:
-var multiArr = [[]];
-var tikTakTo = [
+const multiArr = [[]];
+const tikTakTo = [
     ['x', 'y', 'z'],
     ['x', 'y', 'z']
 ];
