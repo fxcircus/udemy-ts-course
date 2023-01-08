@@ -72,5 +72,3 @@ const bedroom: Room = {
     bedSize: "queen",
     isFurnished: true
 }
-
-console.log("Hi")
