@@ -3,6 +3,7 @@
 // inputEl.value = "SOME TEXT!"
 // const inputEl2 = document.querySelector<HTMLInputElement>("#username")!
 // inputEl2.value = "SOME TEXT!"
+// -------------------------------
 // Writing functions with generics
 // -------------------------------
 // identity function
@@ -33,9 +34,26 @@ const identity2 = (item) => {
 // EX2: function that returns random el from array, adapted to the type
 const getRandomElement = (arr) => {
     const randIdx = Math.floor(Math.random() * arr.length);
-    const res = arr[randIdx];
-    console.log(res);
-    return res;
+    return arr[randIdx];
 };
 getRandomElement([1, 2, 3]);
 getRandomElement(["a", "b", "c"]);
+// -------------------------------
+// generics with multiple types with 
+// -------------------------------
+function merge1(object1, object2) {
+    return Object.assign(Object.assign({}, object1), object2);
+}
+const comboObj1 = merge1({ name: "Roy" }, { age: 32 });
+// Type constraint - Limiting the allowed type to be object:
+function merge2(object1, object2) {
+    return Object.assign(Object.assign({}, object1), object2);
+}
+// error: Argument of type 'number' is not assignable to parameter of type 'object'
+// const comboObj2 = merge2 ({ name: "Roy"} , 9) 
+// Default values:
+function makeEmptyaArray() {
+    return [];
+}
+const nums = makeEmptyaArray(); // nums: number[]
+const bools = makeEmptyaArray(); // bools: boolean[]
