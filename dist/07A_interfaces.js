@@ -28,4 +28,3 @@ const bedroom = {
     bedSize: "queen",
     isFurnished: true
 };
-console.log("Hi");
