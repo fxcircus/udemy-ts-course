@@ -1,6 +1,8 @@
 // const inputEl = document.querySelector("#username")
 // inputEl.value = "SOME TEXT!"
 
+import { getThemeAdminByName } from "@frontegg/js"
+
 
 // const inputEl2 = document.querySelector<HTMLInputElement>("#username")!
 // inputEl2.value = "SOME TEXT!"
@@ -74,3 +76,27 @@ function makeEmptyaArray<T = number>(): T[] {
 }
 const nums = makeEmptyaArray() // nums: number[]
 const bools = makeEmptyaArray<boolean>() // bools: boolean[]
+
+
+// Generics & Classes
+// ------------------
+
+interface MySong {
+    title: string
+    artist: string
+}
+interface Video {
+    title: string
+    creator: string
+    resolution: string
+}
+
+class Playlist<T> {
+    public queue: T[] = []
+    add(el: T) {
+        this.queue.push(el)
+    }
+}
+const songs = new Playlist<MySong>()
+const videos = new Playlist<Video>()
+videos.add()

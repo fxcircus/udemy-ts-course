@@ -1,4 +1,3 @@
-"use strict";
 // const inputEl = document.querySelector("#username")
 // inputEl.value = "SOME TEXT!"
 // const inputEl2 = document.querySelector<HTMLInputElement>("#username")!
@@ -57,3 +56,15 @@ function makeEmptyaArray() {
 }
 const nums = makeEmptyaArray(); // nums: number[]
 const bools = makeEmptyaArray(); // bools: boolean[]
+class Playlist {
+    constructor() {
+        this.queue = [];
+    }
+    add(el) {
+        this.queue.push(el);
+    }
+}
+const songs = new Playlist();
+const videos = new Playlist();
+videos.add();
+export {};

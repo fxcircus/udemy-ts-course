@@ -105,3 +105,36 @@ function makeNoise(animal: Cat | Dog): string {
 
 // 6) Discriminated Unions:
 // ------------------------
+interface Rooster {
+    name: string
+    weight: string
+    age: number
+    kind: "rooster"
+}
+interface Cow {
+    name: string
+    weight: number
+    age: number
+    kind: "cow"
+} 
+interface Pig {
+    name: string
+    weight: string
+    age: string
+    kind: "pig"
+}
+type FarmAnimal = Pig | Rooster | Cow
+const getFarmAnimalSound = (animal: FarmAnimal) => {
+    switch (animal.kind) {
+        case("pig"):
+            return "Oink!"                  // animal: Pig
+        case("cow"):
+            return "Moo!"                   // animal: Cow
+        case("rooster"):
+            return "Coocoo!"                // animal: Rooster
+        // Exhaustivness checks with Never:
+        default:
+            const _exhaustiveCheck: never = animal
+            return _exhaustiveCheck
+    }
+}
